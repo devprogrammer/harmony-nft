@@ -8,7 +8,7 @@ require('dotenv').config();
 // const web3 = createAlchemyWeb3(API_URL); 
 
 const contractABI = require('../contract-abi.json')
-const contractAddress = "0x4A73111159c832589b00754cA85EdFB12BdF3Fda";
+const contractAddress = "0xff8D076BdB5e5b42dE40e347b698d4472ed7c27a";
 
 export const mintNFT = async(url, name, description) => {
 
@@ -36,7 +36,7 @@ export const mintNFT = async(url, name, description) => {
     const transactionParameters = {
         to: contractAddress, // Required except during contract publications.
         from: window.ethereum.selectedAddress, // must match user's active address.
-        'data': window.contract.methods.mintNFT(window.ethereum.selectedAddress, tokenURI, 12, 15, "regular", {value: ethers.utils.parseEther('300000000000000000')}).encodeABI()//make call to NFT smart contract 
+        'data': window.contract.methods.mintNFT(window.ethereum.selectedAddress, tokenURI, 0, {value: ethers.utils.parseEther('300000000000000000')}).encodeABI()//make call to NFT smart contract 
     };
     // const transactionParameters = {
     //     to: contractAddress, // Required except during contract publications.

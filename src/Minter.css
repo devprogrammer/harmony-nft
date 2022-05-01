@@ -1,0 +1,12 @@
+.sale-section {
+    display: flex;
+    justify-content: center;
+}
+.publicSaleContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.whiteListSaleContainer {
+    display: flex;
+    justify-content: space-between;
+}
